@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAITH AL ARAB</title>
+  <style>
+    /* Reset & Body */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body 
+    {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: url('CHARCOL.png');
+    }
+
+
+    /* Navbar */
+    nav 
+
+{
+     
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+    }
+
+
+
+   nav img {
+      height: 100px; /* Adjust the height of the logo */
+      margin-right: 10px;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero Section */
+    .hero {
+      height: 60vh;
+      background: url('https://via.placeholder.com/1200x600?text=Charcoal+Trading') 
+                  no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+    }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero-content p { font-size: 1.2rem; }
+
+    /* Sections */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .feature {
+      background: #fff;
+      flex: 1 1 250px;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="brand"><img src="LOGO1.png"><BAITH AL ARAB</div>
+      <div class="links">
+        <a href="#home">HOME</a>
+        <a href="#features">ABOUT US</a>
+        <a href="#about">PRODUCTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Premium Charcoal Supplies</h1>
+      <p>Reliable sourcing and sustainable trading for grilling, industry & beyond.</p>
+    </div>
+  </section>
+
+  <section id="features" class="container">
+    <h2 style="text-align:center; margin-bottom:1rem;">Our Products</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Grill Charcoal</h3>
+        <p>High-quality, all-natural charcoal ideal for BBQ and home cookouts.</p>
+      </div>
+      <div class="feature">
+        <h3>Industrial Charcoal</h3>
+        <p>Bulk-grade charcoal for metallurgical and manufacturing uses.</p>
+      </div>
+      <div class="feature">
+        <h3>Eco Charcoal</h3>
+        <p>Sustainably-produced charcoal from renewable wood sources.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>At Charcoal Trading Co., we specialize in sourcing and delivering premium charcoal products to clients worldwide. With sustainable practices and decades of industry experience, we ensure quality, reliability, and environmental responsibility in every shipment.</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@charcoaltradingco.com">info@charcoaltradingco.com</a></p>
+    <p>Phone: +1 (555) 123-4567</p>
+  </section>
+
+  <footer>
+    <p>© 2025 BAITH AL ARAB — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAITH AL ARAB</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body 
+      {
+         font-family: Arial, sans-serif;
+         padding-top: 60px; /* space for navbar */
+          }
+      
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      z-index: 1000;
+    }
+    nav .brand {
+      font-size: 1.5rem;
+    }
+    nav .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    nav .nav-links li {
+      margin-left: 1rem;
+    }
+    nav .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+    nav .nav-links a:hover {
+      background: #555;
+    }
+
+     <img src="CHARCOL.png" alt="HTML5 Icon" width="128" height="128">
+
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">BAITH AL ARAB</div>
+  <ul class="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#features">ABOUT US</a></li>
+    <li><a href="#about">PRODUCTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="home" style="padding:2rem"><h1>Home</h1><p>Welcome section content here.</p></section>
+  <section id="features" style="padding:2rem"><h1>Features</h1><p>Feature details here.</p></section>
+  <section id="about" style="padding:2rem"><h1>About</h1><p>About us content here.</p></section>
+  <section id="contact" style="padding:2rem"><h1>Contact</h1><p>Contact info here.</p></section>
+</main>
+
+</body>
+</html>
