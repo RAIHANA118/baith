@@ -1,24 +1,237 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Global Styles */
+:root {
+  --black: #101010;
+  --dark: #191919;
+  --orange: #ff7900;
+  --orange-light: #ff9d42;
+  --white: #ffffff;
+  --text: #eeeeee;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Stylish Navbar */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(16, 16, 16, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 121, 0, 0.3);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--orange-light);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Orange Button */
+.nav-btn {
+  display: inline-block;
+  padding: 11px 22px;
+  background: linear-gradient(
+    135deg,
+    var(--orange),
+    var(--orange-light)
+  );
+  color: var(--black);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 18px rgba(255, 121, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 121, 0, 0.4);
+}
+
+/* Section Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 span,
+.highlight {
+  color: var(--orange);
+}
+
+/* Image Gallery */
 .grid-gallery {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  gap: 22px;
 }
 
 .grid-gallery img {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   display: block;
-  border-radius: 5px;
-  transition: transform 0.3s;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 121, 0, 0.2);
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
 }
 
 .grid-gallery img:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--orange);
+  box-shadow: 0 12px 30px rgba(255, 121, 0, 0.2);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2000;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 13px 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-btn {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  .grid-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 12px;
+  }
+
+  .grid-gallery img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-gallery img {
+    height: 230px;
+  }
 }
